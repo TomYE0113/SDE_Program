@@ -5,6 +5,6 @@ import com.company.Food;
 public class Chicken implements Food {
     @Override
     public void call() {
-        System.out.println("I'm chicken");
+        System.out.println("You ordered chicken");
     }
 }

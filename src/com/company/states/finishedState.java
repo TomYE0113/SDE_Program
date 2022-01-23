@@ -20,7 +20,7 @@ public class finishedState implements orderState {
 
     @Override
     public void foodPicker() {
-        writer.write("Would you like more food?");
+        writer.write("Would you like more food? (yes/no)");
         String answer = reader.readLine();
 
         if (answer.equals("yes")) {

@@ -20,7 +20,7 @@ public class makingState implements orderState {
 
     @Override
     public void foodPicker() {
-        writer.write("What would you like to eat?");
+        writer.write("What would you like to eat? (pizza/burger/chicken)");
         String food = reader.readLine();
 
         if (food.equals("pizza")) {

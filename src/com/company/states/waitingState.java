@@ -2,10 +2,9 @@ package com.company.states;
 
 import com.company.console.ConsoleReader;
 import com.company.console.ConsoleWriter;
-import com.company.foodFacade;
 import com.company.orderState;
 
-public class finishedState implements orderState {
+public class waitingState implements orderState {
 
     ConsoleWriter writer = new ConsoleWriter();
     ConsoleReader reader = new ConsoleReader();
@@ -13,14 +12,14 @@ public class finishedState implements orderState {
     com.company.foodFacade foodFacade;
     int count;
 
-    public finishedState(foodFacade foodFacade, int count) {
+    public waitingState(com.company.foodFacade foodFacade, int count) {
         this.foodFacade = foodFacade;
         this.count = count;
     }
 
     @Override
     public void foodPicker() {
-        writer.write("Would you like more food? (yes/no)");
+        writer.write("Welcome! Can I take your order please? (yes/no)");
         String answer = reader.readLine();
 
         if (answer.equals("yes")) {
